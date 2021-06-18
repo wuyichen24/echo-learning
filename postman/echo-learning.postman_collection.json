@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "40566b05-df50-418a-bc9f-9bc21aeb86fb",
+		"name": "echo-learning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "bind",
+			"item": [
+				{
+					"name": "json",
+					"item": [
+						{
+							"name": "example1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Joe\",\n    \"email\":\"joe@labstack\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1323/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1323",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "response",
+			"item": [
+				{
+					"name": "return",
+					"item": [
+						{
+							"name": "string",
+							"item": [
+								{
+									"name": "example",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/string",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"string"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "html",
+							"item": [
+								{
+									"name": "html",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/html",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"html"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "html_blob",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/html/blob",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"html",
+												"blob"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "json",
+							"item": [
+								{
+									"name": "json",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/json",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"json"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "json_pretty",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/json/pretty",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"json",
+												"pretty"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "json_stream",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/json/stream",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"json",
+												"stream"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "json_blob",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/json/pretty",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"json",
+												"pretty"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
