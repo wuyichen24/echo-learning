@@ -50,30 +50,6 @@
 					"name": "return",
 					"item": [
 						{
-							"name": "string",
-							"item": [
-								{
-									"name": "example",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "http://localhost:1323/string",
-											"protocol": "http",
-											"host": [
-												"localhost"
-											],
-											"port": "1323",
-											"path": [
-												"string"
-											]
-										}
-									},
-									"response": []
-								}
-							]
-						},
-						{
 							"name": "html",
 							"item": [
 								{
@@ -185,7 +161,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:1323/json/pretty",
+											"raw": "http://localhost:1323/json/blob",
 											"protocol": "http",
 											"host": [
 												"localhost"
@@ -193,7 +169,378 @@
 											"port": "1323",
 											"path": [
 												"json",
+												"blob"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "nocontent",
+							"item": [
+								{
+									"name": "no_content",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/nocontent",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"nocontent"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "string",
+							"item": [
+								{
+									"name": "example",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/string",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"string"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "xml",
+							"item": [
+								{
+									"name": "xml",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/xml",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"xml"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "xml_pretty",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/xml/pretty",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"xml",
 												"pretty"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "xml_stream",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/xml/stream",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"xml",
+												"stream"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "xml_blob",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/xml/blob",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"xml",
+												"blob"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "request",
+			"item": [
+				{
+					"name": "get_data",
+					"item": [
+						{
+							"name": "path_parameter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:1323/pathparam/helloworld",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1323",
+									"path": [
+										"pathparam",
+										"helloworld"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "query_parameter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:1323/queryparam?key=helloworld",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1323",
+									"path": [
+										"queryparam"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "helloworld"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "header",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "key",
+										"value": "helloworld",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:1323/header",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1323",
+									"path": [
+										"header"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "form",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "key",
+											"value": "helloworld",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:1323/form",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1323",
+									"path": [
+										"form"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "route",
+					"item": [
+						{
+							"name": "group_route",
+							"item": [
+								{
+									"name": "/v1/login",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/v1/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"v1",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/v1/submit",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/v1/submit",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"v1",
+												"submit"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/v1/read",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/v1/read",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"v1",
+												"read"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/v2/login",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/v2/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"v2",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/v2/submit",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/v2/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"v2",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/v2/read",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/v2/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"v2",
+												"login"
 											]
 										}
 									},
