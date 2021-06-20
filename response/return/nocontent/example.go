@@ -8,7 +8,7 @@ import (
 func main() {
 	e := echo.New()
 	e.GET("/nocontent", func(c echo.Context) (err error) {
-		return c.String(http.StatusOK, "Hello, World!")
+		return c.NoContent(http.StatusOK)
 	})
 	e.Logger.Fatal(e.Start(":1323"))
 }
