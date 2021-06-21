@@ -44,6 +44,457 @@
 			]
 		},
 		{
+			"name": "logging",
+			"item": [
+				{
+					"name": "request",
+					"item": [
+						{
+							"name": "customformat",
+							"item": [
+								{
+									"name": "logger_with_custom_format",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/logging",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"logging"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "default",
+							"item": [
+								{
+									"name": "default_logger",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/logging",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"logging"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "system",
+					"item": [
+						{
+							"name": "level",
+							"item": [
+								{
+									"name": "debug",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/debug",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"debug"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "info",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/info",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"info"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "warn",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/warn",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"warn"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "error",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/error",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"error"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "customformat",
+							"item": [
+								{
+									"name": "logger_with_custom_format",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/logging",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"logging"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "middleware",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "basic_auth",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "abcd1234",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "joe",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:1323/basicauth",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1323",
+									"path": [
+										"basicauth"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "request",
+			"item": [
+				{
+					"name": "get_data",
+					"item": [
+						{
+							"name": "path_parameter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:1323/pathparam/helloworld",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1323",
+									"path": [
+										"pathparam",
+										"helloworld"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "query_parameter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:1323/queryparam?key=helloworld",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1323",
+									"path": [
+										"queryparam"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "helloworld"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "header",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "key",
+										"value": "helloworld",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:1323/header",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1323",
+									"path": [
+										"header"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "form",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "key",
+											"value": "helloworld",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:1323/form",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1323",
+									"path": [
+										"form"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "route",
+					"item": [
+						{
+							"name": "group_route",
+							"item": [
+								{
+									"name": "/v1/login",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/v1/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"v1",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/v1/submit",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/v1/submit",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"v1",
+												"submit"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/v1/read",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/v1/read",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"v1",
+												"read"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/v2/login",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/v2/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"v2",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/v2/submit",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/v2/submit",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"v2",
+												"submit"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/v2/read",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:1323/v2/read",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"v2",
+												"read"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "response",
 			"item": [
 				{
@@ -314,132 +765,42 @@
 			]
 		},
 		{
-			"name": "request",
+			"name": "case",
 			"item": [
 				{
-					"name": "get_data",
+					"name": "jwt",
 					"item": [
 						{
-							"name": "path_parameter",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:1323/pathparam/helloworld",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "1323",
-									"path": [
-										"pathparam",
-										"helloworld"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "query_parameter",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:1323/queryparam?key=helloworld",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "1323",
-									"path": [
-										"queryparam"
-									],
-									"query": [
-										{
-											"key": "key",
-											"value": "helloworld"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "header",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "key",
-										"value": "helloworld",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "http://localhost:1323/header",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "1323",
-									"path": [
-										"header"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "form",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "key",
-											"value": "helloworld",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "http://localhost:1323/form",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "1323",
-									"path": [
-										"form"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "route",
-					"item": [
-						{
-							"name": "group_route",
+							"name": "mapclaim",
 							"item": [
 								{
-									"name": "/v1/login",
+									"name": "get_token",
 									"request": {
-										"method": "GET",
+										"method": "POST",
 										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "username",
+													"value": "jone",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "abcd1234",
+													"type": "text"
+												}
+											]
+										},
 										"url": {
-											"raw": "http://localhost:1323/v1/login",
+											"raw": "http://localhost:1323/login",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
 											"port": "1323",
 											"path": [
-												"v1",
 												"login"
 											]
 										}
@@ -447,59 +808,68 @@
 									"response": []
 								},
 								{
-									"name": "/v1/submit",
+									"name": "verify_token",
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6dHJ1ZSwiZXhwIjoxNjI0NDk0OTgwLCJuYW1lIjoiam9uZSJ9.BFF7hvPlvywVFuisy4cH7C3flnvxk5rXm9cAzy0iNtU",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:1323/v1/submit",
+											"raw": "http://localhost:1323/restricted/verify",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
 											"port": "1323",
 											"path": [
-												"v1",
-												"submit"
+												"restricted",
+												"verify"
 											]
 										}
 									},
 									"response": []
-								},
+								}
+							]
+						},
+						{
+							"name": "refreshtoken",
+							"item": [
 								{
-									"name": "/v1/read",
+									"name": "get_token",
 									"request": {
-										"method": "GET",
+										"method": "POST",
 										"header": [],
-										"url": {
-											"raw": "http://localhost:1323/v1/read",
-											"protocol": "http",
-											"host": [
-												"localhost"
-											],
-											"port": "1323",
-											"path": [
-												"v1",
-												"read"
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "username",
+													"value": "jone",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "abcd1234",
+													"type": "text"
+												}
 											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "/v2/login",
-									"request": {
-										"method": "GET",
-										"header": [],
+										},
 										"url": {
-											"raw": "http://localhost:1323/v2/login",
+											"raw": "http://localhost:1323/login",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
 											"port": "1323",
 											"path": [
-												"v2",
 												"login"
 											]
 										}
@@ -507,40 +877,57 @@
 									"response": []
 								},
 								{
-									"name": "/v2/submit",
+									"name": "verify_token",
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6dHJ1ZSwiZXhwIjoxNjI0NDk0OTgwLCJuYW1lIjoiam9uZSJ9.BFF7hvPlvywVFuisy4cH7C3flnvxk5rXm9cAzy0iNtU",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:1323/v2/login",
+											"raw": "http://localhost:1323/restricted",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
 											"port": "1323",
 											"path": [
-												"v2",
-												"login"
+												"restricted"
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "/v2/read",
+									"name": "refresh_token",
 									"request": {
-										"method": "GET",
+										"method": "POST",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjQ0OTg2NTUsInN1YiI6MX0.qKvOStDtqrWv6cinEwyDW6bFyhWSiNJOYn9mi9oWS7s\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
-											"raw": "http://localhost:1323/v2/login",
+											"raw": "http://localhost:1323/refresh",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
 											"port": "1323",
 											"path": [
-												"v2",
-												"login"
+												"refresh"
 											]
 										}
 									},
