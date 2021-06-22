@@ -35,5 +35,5 @@ The code examples are based on the [tutorial](https://echo.labstack.com/guide/) 
       - nocontent: The example of responding no content.
       - string: The example of responding string.
       - xml: The example of responding XML.
-
+- **postman**: The postman collection.
 
