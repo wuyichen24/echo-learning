@@ -28,6 +28,9 @@ The code examples are based on the [tutorial](https://echo.labstack.com/guide/) 
 - **request**: The examples of request.
    - getdata: The example of getting data from the different places (path parameter, request header, etc.) of the request.
    - route: The example of group route.
+   - uploadfile: The examples of uploading file.
+      - formdata: The example of uploading file(s) by the form data in the request body.
+      - requestbody: The example of uploading by the binary in the request body.
 - **response**: The examples of response.
    - return: The examples of returning different types of data.
       - html: The example of responding HTML.
