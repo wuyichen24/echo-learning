@@ -491,6 +491,73 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "uploadfile",
+					"item": [
+						{
+							"name": "formdata",
+							"item": [
+								{
+									"name": "upload_by_form_data",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/Users/wuyichen/Downloads/test.csv"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:1323/upload",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"upload"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "requestbody",
+							"item": [
+								{
+									"name": "upload_by_request_body",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "file",
+											"file": {}
+										},
+										"url": {
+											"raw": "http://localhost:1323/upload",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "1323",
+											"path": [
+												"upload"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
 				}
 			]
 		},
@@ -755,6 +822,20 @@
 												"blob"
 											]
 										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "error",
+							"item": [
+								{
+									"name": "New Request",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": null
 									},
 									"response": []
 								}
